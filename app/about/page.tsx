@@ -1,6 +1,11 @@
+"use client";
+import { Container } from "../../styles/bodystyle";
+
 export default function About() {
     return (
-      <div>About</div>
+      <Container>
+        <div>About</div>
+      </Container>
     )
   }
   

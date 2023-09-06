@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Inter, Roboto } from 'next/font/google'
 import Link from 'next/link'
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -60,7 +61,7 @@ export default function RootLayout({
       <head>
         <title>portfolio</title>
       </head>
-      <body className={inter.className}>
+      <body className={inter.className} suppressHydrationWarning={true}>
       <script
           dangerouslySetInnerHTML={{
             __html: themeInitializerScript,
@@ -68,6 +69,7 @@ export default function RootLayout({
         ></script>
         <Header/>
         {children}
+        <Footer/>
       </body>
     </html>
   )

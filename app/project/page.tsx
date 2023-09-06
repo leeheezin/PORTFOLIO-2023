@@ -1,7 +1,12 @@
+"use client";
+import { Container } from "../../styles/bodystyle";
+
 export default function Project(){
     return (
-        <div>
-            project
-        </div>
+        <Container>
+            <div>
+                project
+            </div>
+        </Container>
     )
 }

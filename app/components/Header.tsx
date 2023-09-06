@@ -17,6 +17,7 @@ const HeaderWrap = styled.header`
     align-items: center;
     width: 100%;
     height: 80px;
+    padding: 2%;
 `
 const Nav = styled.nav`
     ul {
@@ -54,23 +55,24 @@ export default function Header() {
         }, []);
     return(
         <HeaderWrap>
-                <h1 className="logo">
-                    <Image 
-                        src="/zin.png" 
-                        width={80}
-                        height={20}
-                        alt="logo image"/>
-                </h1>
-                <Nav>
-                    <ul>
-                        <li><Link href="/" className="text-3xl font-bold">Home</Link></li>
-                        <li><Link href="/about" className="text-3xl font-bold">About</Link></li>
-                        <li><Link href="/project" className="text-3xl font-bold">Project</Link></li>
-                        <li><Link href="/contact" className="text-3xl font-bold">Contact</Link></li>
-                        <li className="github"><Link href="https://github.com/leeheezin"  className="text-3xl font-bold" target="_blank">Github</Link></li>
-                        <button onClick={handleToggle}>{darkTheme ? <MdToggleOn style={styledIcon}/>: <MdToggleOff style={styledIcon}/>}</button>
-                    </ul>
-                </Nav>
+            <h1 className="text-5xl font-bold">
+                Zin
+                {/* <Image 
+                    src="/zin.png" 
+                    width={80}
+                    height={20}
+                    alt="logo image"/> */}
+            </h1>
+            <Nav>
+                <ul>
+                    <li><Link href="/" className="text-3xl font-bold">Home</Link></li>
+                    <li><Link href="/about" className="text-3xl font-bold">About</Link></li>
+                    <li><Link href="/project" className="text-3xl font-bold">Project</Link></li>
+                    <li><Link href="/contact" className="text-3xl font-bold">Contact</Link></li>
+                    {/* <li className="github"><Link href="https://github.com/leeheezin"  className="text-3xl font-bold" target="_blank">Github</Link></li> */}
+                    <button onClick={handleToggle}>{darkTheme ? <MdToggleOn style={styledIcon}/>: <MdToggleOff style={styledIcon}/>}</button>
+                </ul>
+            </Nav>
         </HeaderWrap>
     )
 }   
